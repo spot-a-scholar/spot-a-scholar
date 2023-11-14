@@ -1,19 +1,38 @@
 import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container id="landing-page" fluid className="py-3">
-    <Row className="align-middle text-center">
-      <Col xs={4}>
-        <Image roundedCircle src="/images/meteor-logo.png" width="150px" />
+  <Container className="grad-background">
+    {/* The landing page main text */}
+    <Row className="justify-content-center pt-5">
+      <Col className="text-center">
+        <h1 className="padding-class white-text">Line 1</h1>
+        <h1 className="white-text">Line 2</h1>
+        <h1 className="white-text">Line 3</h1>
+        <h1 className="white-text">Line 4</h1>
       </Col>
+    </Row>
 
-      <Col xs={8} className="d-flex flex-column justify-content-center">
-        <h1>Welcome to this template</h1>
-        <p>Now get to work and modify this app!</p>
+    {/* Login and Sign up buttons under the main text */}
+    <Row className="pt-5 pb-5">
+      <Col className="justify-content-end d-flex">
+        <Button className="w-50">
+          Login
+        </Button>
       </Col>
+      <Col>
+        <Button className="w-50">
+          Sign Up
+        </Button>
+      </Col>
+    </Row>
 
+    {/* Some Image like "OVER $1000 DOLLARS GIVEN AWAY */}
+    <Row className="pt-5">
+      <Col className="text-center justify-content-center">
+        <Image src="images/landing.jpg" />
+      </Col>
     </Row>
   </Container>
 );
