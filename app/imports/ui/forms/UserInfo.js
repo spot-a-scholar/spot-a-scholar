@@ -1,4 +1,5 @@
 import SimpleSchema from 'simpl-schema';
+
 const UserInfoSchema = new SimpleSchema({
   name: { label: 'Name', type: String },
   email: { label: 'Profile Picture', type: String },
