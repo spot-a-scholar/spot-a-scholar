@@ -19,7 +19,7 @@ const SignIn = () => {
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
-  // Handle Signin submission using Meteor's account mechanism.
+  // Handle Signin submission using Meteor's account mechanism..
   const submit = (doc) => {
     // console.log('submit', doc, redirect);
     const { email, password } = doc;
