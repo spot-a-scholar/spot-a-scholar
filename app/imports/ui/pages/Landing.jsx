@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -15,23 +16,16 @@ const Landing = () => (
     {/* Login and Sign up buttons under the main text */}
     <Row className="pt-5 pb-5">
       <Col className="justify-content-end d-flex">
-        <Button className="w-50">
+        <Button className="w-50" as={NavLink} to="/signin" key="signin">
           Login
         </Button>
       </Col>
       <Col>
-        <Button className="w-50">
+        <Button className="w-50" as={NavLink} to="/signup" key="signun">
           Sign Up
         </Button>
       </Col>
     </Row>
-
-    {/* Some Image like "OVER $1000 DOLLARS GIVEN AWAY */}
-    {/* <Row className="pt-5"> */}
-    {/*  <Col className="text-center justify-content-center"> */}
-    {/*    <Image src="images/landing.jpg" /> */}
-    {/*  </Col> */}
-    {/* </Row> */}
   </Container>
 );
 
