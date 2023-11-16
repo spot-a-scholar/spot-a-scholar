@@ -21,7 +21,6 @@ import CreateMeeting from '../pages/CreateMeeting';
 import Home from '../pages/Home';
 import UserProfile from '../pages/UserProfile';
 
-
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
   const { ready } = useTracker(() => {
