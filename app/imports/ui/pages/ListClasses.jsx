@@ -37,8 +37,7 @@ const ListClasses = () => {
     { _id: '30', className: 'ICS 424: Application Frameworks', professor: 'Chase White', students: ['Sam', 'Sophia'], tutors: ['Chloe', 'Charlie'] },
   ];
 
-
-      return (
+  return (
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col md={7}>
@@ -47,24 +46,24 @@ const ListClasses = () => {
           </Col>
           <Table striped bordered hover>
             <thead>
-            <tr>
-              <th>Class</th>
-              <th>Professor(s)</th>
-              <th>Students</th>
-              <th>Tutors</th>
-              <th>Create Study Session</th>
-            </tr>
+              <tr>
+                <th>Class</th>
+                <th>Professor(s)</th>
+                <th>Students</th>
+                <th>Tutors</th>
+                <th>Create Study Session</th>
+              </tr>
             </thead>
             <tbody>
-            {fakeIClasses.map((iclass) => (
-              <tr key={iclass._id}>
-                <td>{iclass.className}</td>
-                <td>{iclass.professor}</td>
-                <td>{iclass.students.join(', ')}</td>
-                <td>{iclass.tutors.join(', ')}</td>
-                <td>Link</td>
-              </tr>
-            ))}
+              {fakeIClasses.map((iclass) => (
+                <tr key={iclass._id}>
+                  <td>{iclass.className}</td>
+                  <td>{iclass.professor}</td>
+                  <td>{iclass.students.join(', ')}</td>
+                  <td>{iclass.tutors.join(', ')}</td>
+                  <td>Link</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
         </Col>
