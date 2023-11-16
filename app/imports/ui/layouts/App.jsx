@@ -18,6 +18,7 @@ import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import CreateMeeting from '../pages/CreateMeeting';
+import UserProfile from '../pages/UserProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
+          <Route path="/userprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
           <Route path="/createmeeting" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
         </Routes>
