@@ -18,7 +18,7 @@ import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import CreateMeeting from '../pages/CreateMeeting';
-import ListClasses from "../pages/ListClasses";
+import ListClasses from '../pages/ListClasses';
 import Home from '../pages/Home';
 import UserProfile from '../pages/UserProfile';
 
