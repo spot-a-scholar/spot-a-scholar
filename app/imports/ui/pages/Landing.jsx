@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -7,10 +7,8 @@ const Landing = () => (
     {/* The landing page main text */}
     <Row className="justify-content-center pt-5">
       <Col className="text-center">
-        <h1 className="padding-class white-text">Line 1</h1>
-        <h1 className="white-text">Line 2</h1>
-        <h1 className="white-text">Line 3</h1>
-        <h1 className="white-text">Line 4</h1>
+        <h1 className="padding-class white-text">Connect, Learn, Succeed</h1>
+        <h1 className="white-text">Your Academic Social Network</h1>
       </Col>
     </Row>
 
@@ -29,11 +27,11 @@ const Landing = () => (
     </Row>
 
     {/* Some Image like "OVER $1000 DOLLARS GIVEN AWAY */}
-    <Row className="pt-5">
-      <Col className="text-center justify-content-center">
-        <Image src="images/landing.jpg" />
-      </Col>
-    </Row>
+    {/* <Row className="pt-5"> */}
+    {/*  <Col className="text-center justify-content-center"> */}
+    {/*    <Image src="images/landing.jpg" /> */}
+    {/*  </Col> */}
+    {/* </Row> */}
   </Container>
 );
 
