@@ -7,6 +7,7 @@ import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { UserInfoSchema as formSchema } from '../forms/UserInfo';
 
 const bridge = new SimpleSchema2Bridge(formSchema);
+// temp function before submit function and collection is added
 const submit = (data, formRef) => data + formRef;
 const UserProfile = () => {
   let fRef = null;
@@ -19,11 +20,11 @@ const UserProfile = () => {
             <Card className="p-2">
               <Row>
                 <Col><TextField name="name" showInlineError placeholder="Your name" /></Col>
-                <Col><TextField name="email" showInlineError placeholder="Upload a Profile Picture" /></Col>
+                <Col><TextField name="profilePicture" showInlineError placeholder="Upload a Profile Picture" /></Col>
               </Row>
               <Row>
-                <Col><TextField name="bio" showInlineError placeholder="List classes you are willing to tutor" /></Col>
-                <Col><TextField name="gpa" showInlineError placeholder="List classes that you need tutoring in" /></Col>
+                <Col><TextField name="scholarClasses" showInlineError placeholder="List classes you are willing to tutor" /></Col>
+                <Col><TextField name="studentClasses" showInlineError placeholder="List classes that you need tutoring in" /></Col>
                 <SubmitField value="Submit" />
               </Row>
             </Card>
