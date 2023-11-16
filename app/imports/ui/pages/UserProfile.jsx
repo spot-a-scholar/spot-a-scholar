@@ -3,13 +3,36 @@ import {
   AutoForm, TextField, SubmitField,
 } from 'uniforms-bootstrap5';
 import React from 'react';
+import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { UserInfoSchema as formSchema } from '../forms/UserInfo';
+import { UserData } from '../../api/user/Users';
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 // temp function before submit function and collection is added
-const submit = (data, formRef) => data + formRef;
-const UserProfile = () => {
+const CreateProfile = () => {
+
+  /* On submit, try to insert the data. If successful, reset the form. */
+  const submit = (data, formRef) => {
+    let insertError;
+    const {
+      name, profilePicture, scholarClasses, studentClasses,
+    } = data;
+    UserData.insert(
+      {
+        name, profilePicture, scholarClasses, studentClasses,
+      },
+      (error) => { insertError = error; },
+    );
+    if (insertError) {
+      swal('Error', insertError.message, 'error');
+    } else {
+      swal('Success', 'The profile was updated.', 'success');
+      formRef.reset();
+    }
+  };
+  // const submit = (data, formRef) => data + formRef;
+  // const UserProfile = () => {
   let fRef = null;
   return (
     <Container>
@@ -35,4 +58,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default CreateProfile;
