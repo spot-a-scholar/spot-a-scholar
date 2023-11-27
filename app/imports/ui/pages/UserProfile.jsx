@@ -24,7 +24,7 @@ const CreateProfile = () => {
     const {
       name, profilePicture, scholarClasses, studentClasses,
     } = data;
-    UserData.insert(
+    UserData.collection.insert(
       {
         name, profilePicture, scholarClasses, studentClasses,
       },
