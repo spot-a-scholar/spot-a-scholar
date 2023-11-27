@@ -5,15 +5,21 @@ import {
 import React from 'react';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { UserInfoSchema as formSchema } from '../forms/UserInfo';
+import SimpleSchema from 'simpl-schema';
 import { UserData } from '../../api/user/Users';
 
+const formSchema = new SimpleSchema({
+  name: String,
+  profilePicture: String,
+  scholarClasses: String,
+  studentClasses: String,
+});
+
 const bridge = new SimpleSchema2Bridge(formSchema);
-// temp function before submit function and collection is added
 const CreateProfile = () => {
 
   /* On submit, try to insert the data. If successful, reset the form. */
-  const submit = (data, formRef) => {
+  const submit = (data) => {
     let insertError;
     const {
       name, profilePicture, scholarClasses, studentClasses,
@@ -28,18 +34,16 @@ const CreateProfile = () => {
       swal('Error', insertError.message, 'error');
     } else {
       swal('Success', 'The profile was updated.', 'success');
-      formRef.reset();
     }
   };
   // const submit = (data, formRef) => data + formRef;
   // const UserProfile = () => {
-  let fRef = null;
   return (
     <Container>
       <Row className="justify-content-center">
         <Col>
           <h2 className="text-center">User Profile</h2>
-          <AutoForm ref={(ref) => { fRef = ref; }} schema={bridge} onSubmit={(data) => submit(data, fRef)}>
+          <AutoForm schema={bridge} onSubmit={(data) => submit(data)}>
             <Card className="p-2">
               <Row>
                 <Col><TextField name="name" showInlineError placeholder="Your name" /></Col>
