@@ -26,3 +26,10 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
+#signin-page {
+  background-color: #B4A7D7;
+}
+#signin-page-bg {
+  background-image: url("https://media.istockphoto.com/id/485560378/vector/magnifying-glass-pattern-stylized.jpg?s=612x612&w=0&k=20&c=be_7xQQCADSzdBgCChWxijY6MfTihN0w7tyxzn7kuq4=");
+}
