@@ -7,7 +7,7 @@ const Landing = () => (
   <Container className="grad-background">
     {/* The landing page main text */}
     <Row className="justify-content-center pt-5">
-      <Col className="text-center">
+      <Col className="text-center pt-5 pb-2">
         <h1 className="padding-class white-text">Connect, Learn, Succeed</h1>
         <h1 className="white-text">Your Academic Social Network</h1>
       </Col>
