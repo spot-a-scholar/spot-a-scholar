@@ -9,5 +9,10 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultUsers": [
+    { "name": "John John", "profilePicture": "test", "scholarClasses": "ICS 314", "studentClasses": "ICS 414", "owner": "admin@foo.com" },
+    { "name": "Man Man", "profilePicture": "temp", "scholarClasses": "ICS 414", "studentClasses": "ICS 514", "owner": "admin@foo.com" }
   ]
 }
