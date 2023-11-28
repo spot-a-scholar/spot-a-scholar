@@ -37,21 +37,21 @@ const SignIn = () => {
   // console.log('render', error, redirect);
   // if correct authentication, redirect to page instead of login screen
   if (redirect) {
-    return (<Navigate to="/home" />);
+    return (<Navigate to="/" />);
   }
   // Otherwise return the Login form.
   return (
-    <div>
-      <Container id="signin-page" className="py-lg-5">
+    <div id="signin-page-bg">
+      <Container className="py-lg-5">
         <Row className="justify-content-center">
-          <Col className="square border rounded-5" xs={6}>
+          <Col id="signin-page" className="square border rounded-5" xs={6}>
             <Col className="text-center">
               <h2 className="pt-5">Welcome Back</h2>
               <h2 className="p-5">Become an Academic Weapon</h2>
             </Col>
             <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-              <TextField id="signin-form-email" name="email" placeholder="email address" />
-              <TextField id="signin-form-password" name="password" placeholder="password" type="password" />
+              <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
+              <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
               <ErrorsField />
               <Row className="pb-lg-5">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
