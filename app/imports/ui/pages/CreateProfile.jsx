@@ -1,6 +1,6 @@
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import {
-  AutoForm, TextField, SubmitField, Alert,
+  AutoForm, TextField, SubmitField,
 } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
