@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import React, { useState } from 'react';
+import React from 'react';
 import { UserData } from '../../api/user/Users';
 
 const formSchema = new SimpleSchema({
