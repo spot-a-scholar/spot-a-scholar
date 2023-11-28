@@ -23,6 +23,7 @@ import Home from '../pages/Home';
 import EditProfile from '../pages/EditProfile';
 import ShowProfile from '../pages/ShowProfile';
 import CreateStudent from '../pages/CreateProfile';
+import ListMeetings from '../pages/ListMeetings';
 // try to fix this one to work with only one page
 // import CreateProfile from '../pages/UserProfile';
 
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/createmeeting" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
           <Route path="/editprofile/:_id" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
           <Route path="/showprofile" element={<ProtectedRoute><ShowProfile /></ProtectedRoute>} />
+          <Route path="/listmeetings" element={<ProtectedRoute><ListMeetings /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </div>
