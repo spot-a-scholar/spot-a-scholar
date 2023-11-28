@@ -15,6 +15,8 @@ const SignUp = ({ location }) => {
   const [redirectToReferer, setRedirectToRef] = useState(false);
 
   const schema = new SimpleSchema({
+    firstName: String,
+    lastName: String,
     email: String,
     password: String,
   });
@@ -34,44 +36,47 @@ const SignUp = ({ location }) => {
   };
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
-  const { from } = location?.state || { from: { pathname: '/add' } };
+  const { from } = location?.state || { from: { pathname: '/userprofile' } };
   // if correct authentication, redirect to from: page instead of signup screen
   if (redirectToReferer) {
     return <Navigate to={from} />;
   }
   return (
-    <Container id="signup-page" className="py-lg-5">
-      <Row className="justify-content-center">
-        <Col className="square border rounded-5" xs={6}>
-          <Col className="text-center">
-            <h2 className="pt-5">Create your Account</h2>
-            <h2 className="p-5">Become an Academic Weapon</h2>
+    <div id="signup-page-bg">
+      <Container className="py-lg-5">
+        <Row className="justify-content-center">
+          <Col id="signup-page" className="square border rounded-5" xs={6}>
+            <Col className="text-center">
+              <h2 className="pt-5">Create your Account</h2>
+              <h2 className="p-5">Become an Academic Weapon</h2>
+            </Col>
+            <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+              <TextField name="email" placeholder="E-mail address" />
+              <TextField name="firstName" placeholder="First Name" />
+              <TextField name="lastName" placeholder="Last Name" />
+              <TextField name="password" placeholder="Password" type="password" />
+              <ErrorsField />
+              <Row className="pb-lg-5">
+                <Col>
+                  <Link to="/signin">Already have an account?</Link>
+                </Col>
+                <Col xs lg="2">
+                  <SubmitField />
+                </Col>
+              </Row>
+            </AutoForm>
+            {error === '' ? (
+              ''
+            ) : (
+              <Alert variant="danger">
+                <Alert.Heading>Registration was not successful</Alert.Heading>
+                {error}
+              </Alert>
+            )}
           </Col>
-          <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-            <TextField name="email" placeholder="E-mail address" />
-            <TextField name="password" placeholder="Password" type="password" />
-            <TextField name="password" placeholder="Verify Password" type="password" />
-            <ErrorsField />
-            <Row className="pb-lg-5">
-              <Col>
-                <Link to="/signin">Already have an account?</Link>
-              </Col>
-              <Col xs lg="2">
-                <SubmitField />
-              </Col>
-            </Row>
-          </AutoForm>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Registration was not successful</Alert.Heading>
-              {error}
-            </Alert>
-          )}
-        </Col>
-      </Row>
-    </Container>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
