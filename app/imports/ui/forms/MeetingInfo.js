@@ -8,4 +8,3 @@ const MeetingInfoSchema = new SimpleSchema({
 });
 
 export { MeetingInfoSchema };
-// temp schema

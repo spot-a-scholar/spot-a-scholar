@@ -9,7 +9,7 @@ class MeetingCollection {
 
     /** Define a schema to specify the structure of each document in the collection. */
     const
-      UserDataSchema = new SimpleSchema({
+      MeetingDataSchema = new SimpleSchema({
         topics: String,
         startTime: Date,
         endTime: Date,
@@ -17,7 +17,7 @@ class MeetingCollection {
         owner: String,
       });
     /** Attach the schema to the collection. */
-    this.collection.attachSchema(UserDataSchema);
+    this.collection.attachSchema(MeetingDataSchema);
 
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;

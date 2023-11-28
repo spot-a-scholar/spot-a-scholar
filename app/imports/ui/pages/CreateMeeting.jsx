@@ -6,8 +6,15 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import swal from 'sweetalert';
-import { MeetingInfoSchema as formSchema } from '../forms/MeetingInfo';
+import SimpleSchema from 'simpl-schema';
 import { Meetings } from '../../api/meeting/Meetings';
+
+const formSchema = new SimpleSchema({
+  topics: String,
+  startTime: Date,
+  endTime: Date,
+  description: String,
+});
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 const CreateMeeting = () => {
