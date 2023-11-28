@@ -3,7 +3,7 @@ import {
   AutoForm, TextField, SubmitField, Alert,
 } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
-import Meteor from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import React, { useState } from 'react';
@@ -17,15 +17,16 @@ const formSchema = new SimpleSchema({
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
-const CreateProfile = () => {
+
+/* Renders the Page for adding a document. */
+const CreateStudent = () => {
   /* On submit, try to insert the data. If successful, reset the form. */
   const submit = (data) => {
     let insertError;
+    const owner = Meteor.user().username;
     const {
       name, profilePicture, scholarClasses, studentClasses,
     } = data;
-    const owner = Meteor.user().username;
-    // const id = Meteor.user()._id;
     UserData.collection.insert(
       {
         name, profilePicture, scholarClasses, studentClasses, owner,
@@ -35,11 +36,13 @@ const CreateProfile = () => {
     if (insertError) {
       swal('Error', insertError.message, 'error');
     } else {
-      swal('Success', 'The profile was updated.', 'success');
+      swal('Success', 'The student record was created.', 'success');
     }
   };
-  // const submit = (data, formRef) => data + formRef;
-  // const UserProfile = () => {
+
+  // Put a space before the label for the Hobbies SelectField.
+
+  /* Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   return (
     <Container>
       <Row className="justify-content-center">
@@ -64,4 +67,4 @@ const CreateProfile = () => {
   );
 };
 
-export default CreateProfile;
+export default CreateStudent;

@@ -14,6 +14,7 @@ class UserDataCollection {
         profilePicture: String,
         scholarClasses: String,
         studentClasses: String,
+        owner: String,
       });
     /** Attach the schema to the collection. */
     this.collection.attachSchema(UserDataSchema);
