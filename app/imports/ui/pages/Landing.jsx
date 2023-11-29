@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container className="grad-background">
+  <Container id="landing-page" className="grad-background">
     {/* The landing page main text */}
     <Row className="justify-content-center pt-5">
       <Col className="text-center pt-5 pb-2">
