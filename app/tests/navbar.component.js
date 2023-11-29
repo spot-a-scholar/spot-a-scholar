@@ -62,6 +62,11 @@ class NavBar {
   async gotoCalendarPage(testController) {
     await testController.click('#calendar-nav');
   }
+
+  /** Go to List ICS classes Page */
+  async gotoListICSClassesPage(testController) {
+    await testController.click('#ics-classes-nav');
+  }
 }
 
 export const navBar = new NavBar();
