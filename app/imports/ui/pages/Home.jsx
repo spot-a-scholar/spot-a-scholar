@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => (
-  <Container className="grad-background">
+  <Container id="home-page" className="grad-background">
     <Row className="py-5">
       <Col className="text-center">
         <h1 className="white-text">Home</h1>

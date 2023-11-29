@@ -16,7 +16,7 @@ const Landing = () => (
     {/* Login and Sign up buttons under the main text */}
     <Row className="pt-5 pb-5">
       <Col className="justify-content-end d-flex">
-        <Button className="w-50" as={NavLink} to="/signin" key="signin">
+        <Button id="landing-sign-in" className="w-50" as={NavLink} to="/signin" key="signin">
           Login
         </Button>
       </Col>

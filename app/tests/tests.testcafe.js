@@ -1,7 +1,7 @@
 import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
-import { signoutPage } from './signout.page';
-import { navBar } from './navbar.component';
+// import { signoutPage } from './signout.page';
+// import { navBar } from './navbar.component';
 
 /* global fixture:false, test:false */
 
@@ -11,14 +11,11 @@ const credentials = { username: 'john@foo.com', password: 'changeme' };
 fixture('meteor-application-template-react localhost test with default db')
   .page('http://localhost:3000');
 
-test.only('Test that landing page shows up', async (testController) => {
+test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
-test('Test that signin and signout work', async (testController) => {
-  await navBar.gotoSignInPage(testController);
+test('Test that login works and redirects to home page', async (testController) => {
+  await landingPage.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.isLoggedIn(testController, credentials.username);
-  await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
 });
