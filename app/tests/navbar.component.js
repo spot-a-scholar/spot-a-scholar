@@ -72,6 +72,11 @@ class NavBar {
   async gotoCreateProfilePage(testController) {
     await testController.click('#user-profile-nav');
   }
+
+  /** Go to Show Profile Page */
+  async gotoShowProfilePage(testController) {
+    await testController.click('#show-profile-nav');
+  }
 }
 
 export const navBar = new NavBar();
