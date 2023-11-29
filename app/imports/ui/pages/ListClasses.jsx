@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-/* Renders a table containing all the ICS Classes. Uses fake data to render each row */
+/* Renders a table containing all the ICS Classes. Uses fake data to render each row*/
 const ListClasses = () => {
 
   const fakeIClasses = [
