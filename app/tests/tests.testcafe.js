@@ -1,7 +1,8 @@
 import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
-// import { signoutPage } from './signout.page';
-// import { navBar } from './navbar.component';
+import { navBar } from './navbar.component';
+import { createMeetingPage } from './createmeeting.page';
+import { homePage } from './home.page';
 
 /* global fixture:false, test:false */
 
@@ -15,7 +16,12 @@ test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
-test('Test that login works and redirects to home page', async (testController) => {
+test('Test that login works and redirects to home page. Then checks all pages', async (testController) => {
   await landingPage.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
+  // eslint-disable-next-line no-restricted-globals
+  await testController.eval(() => location.reload(true));
+  await homePage.isDisplayed(testController);
+  await navBar.gotoCreateMeetingPage(testController);
+  await createMeetingPage.isDisplayed(testController);
 });
