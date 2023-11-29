@@ -40,7 +40,7 @@ const CreateMeeting = () => {
   };
   let fRef = null;
   return (
-    <Container>
+    <Container id="create-meeting-page">
       <Row className="justify-content-center">
         <Col>
           <h2 className="text-center">Create Meeting</h2>

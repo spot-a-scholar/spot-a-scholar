@@ -41,7 +41,7 @@ const SignIn = () => {
   }
   // Otherwise return the Login form.
   return (
-    <div id="signin-page-bg">
+    <div id="signin-page">
       <Container className="py-lg-5">
         <Row className="justify-content-center">
           <Col id="signin-page" className="square border rounded-5" xs={6}>
@@ -56,7 +56,11 @@ const SignIn = () => {
               <Row className="pb-lg-5">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <Col><Link to="/signup">Don't have an account?</Link></Col>
-                <Col xs lg="2"><Button type="submit" value="Submit" id="signin-form-submit">Submit</Button></Col>
+                <Col xs lg="2">
+                  <Button type="submit" value="Submit" id="signin-form-submit">
+                    Submit
+                  </Button>
+                </Col>
               </Row>
             </AutoForm>
             {error === '' ? (

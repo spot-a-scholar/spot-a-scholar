@@ -52,6 +52,31 @@ class NavBar {
     await testController.click('#login-dropdown');
     await testController.click('#login-dropdown-sign-up');
   }
+
+  /** Go to create meeting page */
+  async gotoCreateMeetingPage(testController) {
+    await testController.click('#create-meeting-nav');
+  }
+
+  /** Go to Calendar Page */
+  async gotoCalendarPage(testController) {
+    await testController.click('#calendar-nav');
+  }
+
+  /** Go to List ICS classes Page */
+  async gotoListICSClassesPage(testController) {
+    await testController.click('#ics-classes-nav');
+  }
+
+  /** go to Create Profile Page */
+  async gotoCreateProfilePage(testController) {
+    await testController.click('#user-profile-nav');
+  }
+
+  /** Go to Show Profile Page */
+  async gotoShowProfilePage(testController) {
+    await testController.click('#show-profile-nav');
+  }
 }
 
 export const navBar = new NavBar();
