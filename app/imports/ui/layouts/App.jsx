@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/userprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/createmeeting" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
+          <Route path="/createmeeting/:id" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </div>
