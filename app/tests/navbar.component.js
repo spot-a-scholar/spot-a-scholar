@@ -67,6 +67,11 @@ class NavBar {
   async gotoListICSClassesPage(testController) {
     await testController.click('#ics-classes-nav');
   }
+
+  /** go to Create Profile Page */
+  async gotoCreateProfilePage(testController) {
+    await testController.click('#user-profile-nav');
+  }
 }
 
 export const navBar = new NavBar();

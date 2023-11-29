@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class IcsClassesPage {
+class CreateProfilePage {
   constructor() {
-    this.pageId = '#ics-classes-page';
+    this.pageId = '#create-profile-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -12,4 +12,4 @@ class IcsClassesPage {
   }
 }
 
-export const icsClassesPage = new IcsClassesPage();
+export const createProfilePage = new CreateProfilePage();

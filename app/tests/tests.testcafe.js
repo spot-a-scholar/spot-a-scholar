@@ -5,6 +5,7 @@ import { createMeetingPage } from './createmeeting.page';
 import { homePage } from './home.page';
 import { calendarPage } from './calendar.page';
 import { icsClassesPage } from './icsclasses.page';
+import { createProfilePage } from './createprofile.page';
 
 /* global fixture:false, test:false */
 
@@ -30,4 +31,6 @@ test('Test that login works and redirects to home page. Then checks all pages', 
   await calendarPage.isDisplayed(testController);
   await navBar.gotoListICSClassesPage(testController);
   await icsClassesPage.isDisplayed(testController);
+  await navBar.gotoCreateProfilePage(testController);
+  await createProfilePage.isDisplayed(testController);
 });

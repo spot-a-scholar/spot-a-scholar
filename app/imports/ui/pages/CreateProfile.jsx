@@ -44,7 +44,7 @@ const CreateStudent = () => {
 
   /* Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   return (
-    <Container>
+    <Container id="create-profile-page">
       <Row className="justify-content-center">
         <Col>
           <h2 className="text-center">User Profile</h2>
