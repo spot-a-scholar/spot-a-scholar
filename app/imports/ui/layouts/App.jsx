@@ -6,7 +6,6 @@ import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
@@ -23,6 +22,7 @@ import Home from '../pages/Home';
 import EditProfile from '../pages/EditProfile';
 import ShowProfile from '../pages/ShowProfile';
 import CreateStudent from '../pages/CreateProfile';
+import MeetingList from '../pages/MeetingList';
 import ListMeetings from '../pages/ListMeetings';
 // try to fix this one to work with only one page
 // import CreateProfile from '../pages/UserProfile';
@@ -46,9 +46,10 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-          <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
+          <Route path="/list" element={<ProtectedRoute><ListMeetings /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
+          <Route path="/calendar" element={<ProtectedRoute><MeetingList /></ProtectedRoute>} />
           <Route path="/class" element={<ProtectedRoute><ListClasses /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
@@ -57,7 +58,6 @@ const App = () => {
           <Route path="/createmeeting" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
           <Route path="/editprofile/:_id" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
           <Route path="/showprofile" element={<ProtectedRoute><ShowProfile /></ProtectedRoute>} />
-          <Route path="/listmeetings" element={<ProtectedRoute><ListMeetings /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </div>
