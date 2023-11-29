@@ -4,7 +4,7 @@ import { Col, Container, Row, Table } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Meetings } from '../../api/meeting/Meetings';
-import Meeting from '../components/Meeting';
+import Meeting2 from '../components/Meeting2';
 
 const ListMeetings = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
@@ -36,7 +36,7 @@ const ListMeetings = () => {
               </tr>
             </thead>
             <tbody>
-              {meetings.map((meeting) => <Meeting key={meeting._id} meeting={meeting} />)}
+              {meetings.map((meeting) => <Meeting2 key={meeting._id} meeting={meeting} />)}
             </tbody>
           </Table>
         </Col>

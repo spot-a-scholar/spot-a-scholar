@@ -17,6 +17,7 @@
   ],
 
   "defaultMeetings": [
-    { "topics": "ICS 314", "startTime": "2016-11-11 12:00", "endTime": "2016-11-11 12:01", "description": "Keller 102", "owner": "john@foo.com"}
+    { "topics": "ICS 314", "startTime": "2016-11-11 12:00", "endTime": "2016-11-11 12:01", "description": "Keller 102", "owner": "john@foo.com"},
+    { "topics": "CHEM 162", "startTime": "2016-10-11 12:00", "endTime": "2016-10-11 12:01", "description": "Post Lounge", "owner": "john@foo.com"}
   ]
 }
