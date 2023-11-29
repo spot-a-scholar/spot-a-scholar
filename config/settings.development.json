@@ -9,5 +9,39 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultClass": [
+  { "className": "ICS 101: Tools for the Information Age", "professors": "John Doe", "students": ["Alice", "Bob", "Charlie"], "tutors": ["Eve", "Frank"] },
+  { "className": "ICS 110: Introduction to Computer Programming", "professors": "Jane Smith", "students": ["Grace", "Henry", "Isabel"], "tutors": ["Katherine", "Louis"] },
+  { "className": "ICS 111: Introduction to Computer Science I", "professors": "Alex Johnson", "students": ["Olivia", "Peter", "Rachel"], "tutors": ["Sam", "Tina"] },
+  { "className": "ICS 141: Discrete Mathematics for Computer Science I", "professors": "Michael Brown", "students": ["Sophia", "David", "Emma"], "tutors": ["Nathan", "Lily"] },
+  { "className": "ICS 210: Information Systems in Society", "professors": "Laura White", "students": ["Ella", "Logan", "Mia"], "tutors": ["Noah", "Sophie"] },
+  { "className": "ICS 211: Introduction to Computer Science II", "professors": "William Turner", "students": ["Ava", "Daniel", "James"], "tutors": ["Mia", "Jacob"] },
+  { "className": "ICS 212: Program Structure", "professors": "Sophia Garcia", "students": ["Liam", "Lily", "Lucas"], "tutors": ["Emma", "Olivia"] },
+  { "className": "ICS 215: Introduction to Scripting", "professors": "Oliver Davis", "students": ["Benjamin", "Charlotte", "Chloe"], "tutors": ["Ethan", "Emily"] },
+  { "className": "ICS 222: Basic Concepts of Computer Science", "professors": "Logan Miller", "students": ["Ethan", "Emma", "Ella"], "tutors": ["Liam", "Lily"] },
+  { "className": "ICS 241: Discrete Mathematics for Computer Science II", "professors": "Chloe Brown", "students": ["Emily", "Ethan", "Ella"], "tutors": ["Lucas", "Lily"] },
+  { "className": "ICS 290: Computer Science Careers: An Exploration of the Specialties of Computer Science", "professors": "Lucas Wilson", "students": ["Olivia", "Oscar", "Oliver"], "tutors": ["Sophie", "Sophia"] },
+  { "className": "ICS 311: Algorithms", "professors": "Ella Martinez", "students": ["Chloe", "Charlie", "Charlotte"], "tutors": ["Benjamin", "Bob"] },
+  { "className": "ICS 312: Machine-Level and Systems Programming", "professors": "Oscar Johnson", "students": ["Liam", "Lucas", "Lily"], "tutors": ["Logan", "Laura"] },
+  { "className": "ICS 313: Programming Language Theory", "professors": "Emma White", "students": ["Emily", "Ethan", "Ella"], "tutors": ["Chloe", "Charlie"] },
+  { "className": "ICS 314: Software Engineering I", "professors": "Benjamin Davis", "students": ["Sophie", "Sophia", "Sam"], "tutors": ["Ella", "Ethan"] },
+  { "className": "ICS 315: Web Design and Management", "professors": "Oscar Turner", "students": ["Oscar", "Oliver", "Olivia"], "tutors": ["Charlotte", "Chloe"] },
+  { "className": "ICS 321: Data Storage and Retrieval", "professors": "Ethan Miller", "students": ["Emily", "Ella", "Emma"], "tutors": ["Logan", "Lucas"] },
+  { "className": "ICS 331: Logic Design and Microprocessors", "professors": "Charlotte Garcia", "students": ["Charlie", "Chloe", "Chase"], "tutors": ["Sophia", "Sam"] },
+  { "className": "ICS 332: Operating Systems", "professors": "Charlie Davis", "students": ["Charlotte", "Chase", "Chloe"], "tutors": ["Chloe", "Charlie"] },
+  { "className": "ICS 351: Network Design and Management", "professors": "Chase White", "students": ["Sam", "Sophia", "Sophie"], "tutors": ["Oscar", "Olivia"] },
+  { "className": "ICS 355: Security and Trust I: Resource Protections", "professors": "Sam Turner", "students": ["Logan", "Laura", "Lily"], "tutors": ["Oscar", "Oliver"] },
+  { "className": "ICS 361: Introduction to Artificial Intelligence Programming", "professors": "Sophie Brown", "students": ["Oscar", "Oliver", "Olivia"], "tutors": ["Chloe", "Charlie"] },
+  { "className": "ICS 390: Computing Ethics for Lab Assistants", "professors": "Olivia Martinez", "students": ["Liam", "Lucas", "Lily"], "tutors": ["Emma", "Ethan"] },
+  { "className": "ICS 414: Software Engineering II", "professors": "Oscar Johnson", "students": ["Ella", "Ethan", "Emma"], "tutors": ["Liam", "Lucas"] },
+  { "className": "ICS 415: Introduction to Programming for the Web", "professors": "Chloe Brown", "students": ["Benjamin", "Bob", "Charlotte"], "tutors": ["Oliver", "Olivia"] },
+  { "className": "ICS 419: The Science, Psychology and Philosophy of Systems Design", "professors": "Benjamin Davis", "students": ["Sophie", "Sophia", "Sam"], "tutors": ["Ella", "Ethan"] },
+  { "className": "ICS 421: Database Systems", "professors": "Ethan Miller", "students": ["Emily", "Ella", "Emma"], "tutors": ["Logan", "Lucas"] },
+  { "className": "ICS 422: Data Processing", "professors": "Charlotte Garcia", "students": ["Charlie", "Chloe", "Chase"], "tutors": ["Sophia", "Sam"] },
+  { "className": "ICS 423: Data Security and Cryptography I", "professors": "Charlie Davis", "students": ["Charlotte", "Chase", "Chloe"], "tutors": ["Chloe", "Charlie"] },
+  { "className": "ICS 424: Application Frameworks", "professors": "Chase White", "students": ["Sam", "Sophia"], "tutors": ["Chloe", "Charlie"] }
   ]
+
 }
