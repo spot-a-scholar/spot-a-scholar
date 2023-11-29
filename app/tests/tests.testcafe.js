@@ -3,6 +3,7 @@ import { signinPage } from './signin.page';
 import { navBar } from './navbar.component';
 import { createMeetingPage } from './createmeeting.page';
 import { homePage } from './home.page';
+import { calendarPage } from './calendar.page';
 
 /* global fixture:false, test:false */
 
@@ -24,4 +25,6 @@ test('Test that login works and redirects to home page. Then checks all pages', 
   await homePage.isDisplayed(testController);
   await navBar.gotoCreateMeetingPage(testController);
   await createMeetingPage.isDisplayed(testController);
+  await navBar.gotoCalendarPage(testController);
+  await calendarPage.isDisplayed(testController);
 });

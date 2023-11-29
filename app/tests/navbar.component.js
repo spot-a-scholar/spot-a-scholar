@@ -57,6 +57,11 @@ class NavBar {
   async gotoCreateMeetingPage(testController) {
     await testController.click('#create-meeting-nav');
   }
+
+  /** Go to Calendar Page */
+  async gotoCalendarPage(testController) {
+    await testController.click('#calendar-nav');
+  }
 }
 
 export const navBar = new NavBar();
