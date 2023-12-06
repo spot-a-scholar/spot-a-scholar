@@ -6,7 +6,6 @@ import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
@@ -23,6 +22,8 @@ import Home from '../pages/Home';
 import EditProfile from '../pages/EditProfile';
 import ShowProfile from '../pages/ShowProfile';
 import CreateStudent from '../pages/CreateProfile';
+import MeetingList from '../pages/MeetingList';
+import ListMeetings from '../pages/ListMeetings';
 // try to fix this one to work with only one page
 import CreateProfile from '../pages/UserProfile';
 
@@ -37,16 +38,18 @@ const App = () => {
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
-        <NavBar />
+        {/* eslint-disable-next-line no-restricted-globals */}
+        {location.pathname !== '/' && <NavBar />}
         <Routes>
-          <Route exact path="/" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-          <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
+          <Route path="/list" element={<ProtectedRoute><ListMeetings /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
+          <Route path="/calendar" element={<ProtectedRoute><MeetingList /></ProtectedRoute>} />
           <Route path="/class" element={<ProtectedRoute><ListClasses /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
