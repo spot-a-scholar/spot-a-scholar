@@ -24,23 +24,6 @@ class MeetingsCollection {
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
-/** Define a Mongo collection to hold the data. */
-class MeetingCollection {
-  constructor() {
-    this.name = 'MeetingCollection';
-    this.collection = new Mongo.Collection(this.name);
-
-    /** Define a schema to specify the structure of each document in the collection. */
-    const
-      MeetingDataSchema = new SimpleSchema({
-        topics: String,
-        startTime: Date,
-        endTime: Date,
-        description: String,
-        owner: String,
-      });
-    /** Attach the schema to the collection. */
-    this.collection.attachSchema(MeetingDataSchema);
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;
   }
@@ -51,6 +34,3 @@ class MeetingCollection {
  * @type {MeetingsCollection}
  */
 export const Meetings = new MeetingsCollection();
-/** Make these objects available to others. */
-// export { UserData, UserDataSchema };
-export const Meetings = new MeetingCollection();

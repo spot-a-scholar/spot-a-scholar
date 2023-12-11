@@ -24,7 +24,6 @@ import EditProfile from '../pages/EditProfile';
 import ShowProfile from '../pages/ShowProfile';
 import CreateStudent from '../pages/CreateProfile';
 import MeetingList from '../pages/MeetingList';
-import ListMeetings from '../pages/ListMeetings';
 // try to fix this one to work with only one page
 // import CreateProfile from '../pages/UserProfile';
 

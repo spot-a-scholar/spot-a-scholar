@@ -4,7 +4,6 @@ import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
 import { UserData } from '../../api/user/Users.js';
-import { Meetings } from '../../api/meeting/Meetings';
 
 /* eslint-disable no-console */
 
