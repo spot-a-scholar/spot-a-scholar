@@ -11,6 +11,112 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
+  "defaultCourses": [
+    { "courseCode": "ICS 101", "courseName": "Tools for the Information Age", "teacher": "John Doe" },
+    { "courseCode": "ICS 110", "courseName": "Introduction to Computer Programming", "teacher": "Jane Smith" },
+    { "courseCode": "ICS 111", "courseName": "Introduction to Computer Science I", "teacher": "Alex Johnson" },
+    { "courseCode": "ICS 141", "courseName": "Discrete Mathematics for Computer Science I", "teacher": "Michael Brown" },
+    { "courseCode": "ICS 210", "courseName": "Information Systems in Society", "teacher": "Laura White" },
+    { "courseCode": "ICS 211", "courseName": "Introduction to Computer Science II", "teacher": "William Turner" },
+    { "courseCode": "ICS 212", "courseName": "Program Structure", "teacher": "Sophia Garcia" },
+    { "courseCode": "ICS 215", "courseName": "Introduction to Scripting", "teacher": "Oliver Davis" },
+    { "courseCode": "ICS 222", "courseName": "Basic Concepts of Computer Science", "teacher": "Logan Miller" },
+    { "courseCode": "ICS 241", "courseName": "Discrete Mathematics for Computer Science II", "teacher": "Chloe Brown" },
+    { "courseCode": "ICS 290", "courseName": "Computer Science Careers: An Exploration of the Specialties of Computer Science", "teacher": "Lucas Wilson" },
+    { "courseCode": "ICS 311", "courseName": "Algorithms", "teacher": "Ella Martinez" },
+    { "courseCode": "ICS 312", "courseName": "Machine-Level and Systems Programming", "teacher": "Oscar Johnson" },
+    { "courseCode": "ICS 313", "courseName": "Programming Language Theory", "teacher": "Emma White" },
+    { "courseCode": "ICS 314", "courseName": "Software Engineering I", "teacher": "Benjamin Davis" },
+    { "courseCode": "ICS 315", "courseName": "Web Design and Management", "teacher": "Oscar Turner" },
+    { "courseCode": "ICS 321", "courseName": "Data Storage and Retrieval", "teacher": "Ethan Miller" },
+    { "courseCode": "ICS 331", "courseName": "Logic Design and Microprocessors", "teacher": "Charlotte Garcia" },
+    { "courseCode": "ICS 332", "courseName": "Operating Systems", "teacher": "Charlie Davis" },
+    { "courseCode": "ICS 351", "courseName": "Network Design and Management", "teacher": "Chase White" },
+    { "courseCode": "ICS 355", "courseName": "Security and Trust I: Resource Protections", "teacher": "Sam Turner" },
+    { "courseCode": "ICS 361", "courseName": "Introduction to Artificial Intelligence Programming", "teacher": "Sophie Brown" },
+    { "courseCode": "ICS 390", "courseName": "Computing Ethics for Lab Assistants", "teacher": "Olivia Martinez" },
+    { "courseCode": "ICS 414", "courseName": "Software Engineering II", "teacher": "Oscar Johnson" },
+    { "courseCode": "ICS 415", "courseName": "Introduction to Programming for the Web", "teacher": "Chloe Brown" },
+    { "courseCode": "ICS 419", "courseName": "The Science, Psychology and Philosophy of Systems Design", "teacher": "Benjamin Davis" },
+    { "courseCode": "ICS 421", "courseName": "Database Systems", "teacher": "Ethan Miller" },
+    { "courseCode": "ICS 422", "courseName": "Data Processing", "teacher": "Charlotte Garcia" },
+    { "courseCode": "ICS 423", "courseName": "Data Security and Cryptography I", "teacher": "Charlie Davis" },
+    { "courseCode": "ICS 424", "courseName": "Application Frameworks", "teacher": "Chase White" }
+  ],
+  "defaultStudents": [
+    { "firstName": "Alice", "lastName": "Johnson", "username": "alice123", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Bob", "lastName": "Smith", "username": "bob456", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Charlie", "lastName": "Davis", "username": "charlie789", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Grace", "lastName": "Miller", "username": "grace101", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Henry", "lastName": "Turner", "username": "henry202", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Isabel", "lastName": "Brown", "username": "isabel303", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Olivia", "lastName": "Garcia", "username": "olivia404", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Peter", "lastName": "White", "username": "peter505", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Rachel", "lastName": "Martinez", "username": "rachel606", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
+    { "firstName": "Sophia", "lastName": "Turner", "username": "sophia707", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" }
+  ],
+
+  "defaultMeetings": [
+    {
+      "courseCode": "ICS314",
+      "location": "Room 202, University Building",
+      "sessionYear": "2023",
+      "sessionMonth": "January",
+      "sessionDay": "21",
+      "sessionTime": "10:00 AM",
+      "description": "study for upcoming WOD",
+      "owner": "Philip Johnson"
+    },
+    {
+      "courseCode": "ICS311",
+      "location": "Library Conference Room",
+      "sessionYear": "2023",
+      "sessionMonth": "May",
+      "sessionDay": "5",
+      "sessionTime": "2:30 PM",
+      "description": "review study guide for upcoming midterm",
+      "owner": "Henri Casanova"
+    },
+    {
+      "courseCode": "MAT202",
+      "location": "Mathematics Department",
+      "sessionYear": "2023",
+      "sessionMonth": "February",
+      "sessionDay": "10",
+      "sessionTime": "1:00 PM",
+      "description": "solve complex mathematical problems",
+      "owner": "Alice Smith"
+    },
+    {
+      "courseCode": "ENG101",
+      "location": "Room 105, Humanities Building",
+      "sessionYear": "2023",
+      "sessionMonth": "March",
+      "sessionDay": "15",
+      "sessionTime": "3:45 PM",
+      "description": "discuss literature and writing techniques",
+      "owner": "Bob Thompson"
+    },
+    {
+      "courseCode": "PHY301",
+      "location": "Physics Laboratory",
+      "sessionYear": "2023",
+      "sessionMonth": "April",
+      "sessionDay": "3",
+      "sessionTime": "11:15 AM",
+      "description": "conduct experiments in classical mechanics",
+      "owner": "Eva Rodriguez"
+    },
+    {
+      "courseCode": "CS405",
+      "location": "Computer Science Research Center",
+      "sessionYear": "2023",
+      "sessionMonth": "June",
+      "sessionDay": "8",
+      "sessionTime": "9:30 AM",
+      "description": "present research findings on machine learning",
+      "owner": "David Chang"
+    }
   "defaultUsers": [
     { "name": "John John", "profilePicture": "test", "scholarClasses": "ICS 314", "studentClasses": "ICS 414", "owner": "admin@foo.com" },
     { "name": "Man Man", "profilePicture": "temp", "scholarClasses": "ICS 414", "studentClasses": "ICS 514", "owner": "admin@foo.com" }
@@ -20,4 +126,5 @@
     { "topics": "ICS 314", "startTime": "2016-11-11 12:00", "endTime": "2016-11-11 12:01", "description": "Keller 102", "owner": "john@foo.com"},
     { "topics": "CHEM 162", "startTime": "2016-10-11 12:00", "endTime": "2016-10-11 12:01", "description": "Post Lounge", "owner": "john@foo.com"}
   ]
+
 }
