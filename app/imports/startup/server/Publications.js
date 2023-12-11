@@ -3,6 +3,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
+import { Meetings } from '../../api/meeting/Meetings.js';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
@@ -41,6 +42,16 @@ Meteor.publish(Course.userPublicationName, function () {
   }
   return this.ready();
 });
+
+// User-level publication.
+// If logged in, then publish all course documents. Otherwise, publish nothing.
+Meteor.publish(Meetings.userPublicationName, function () {
+  if (this.userId) {
+    return Meetings.collection.find();
+  }
+  return this.ready();
+});
+
 
 // alanning:roles publication
 // Recommended code to publish roles for each user.

@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
+import { Meetings } from '../../api/meeting/Meetings.js';
 
 /* eslint-disable no-console */
 
@@ -46,3 +47,17 @@ if (Students.collection.find().count() === 0) {
     Meteor.settings.defaultStudents.forEach(student => addStudents(student));
   }
 }
+
+const addMeetings = (meeting) => {
+  console.log(`  Adding: ${meeting.courseCode} (${meeting.owner})`);
+  Meetings.collection.insert(meeting);
+};
+
+// Initialize the StudentsCollection if empty.
+if (Meetings.collection.find().count() === 0) {
+  if (Meteor.settings.defaultMeetings) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultMeetings.forEach(meeting => addMeetings(meeting));
+  }
+}
+

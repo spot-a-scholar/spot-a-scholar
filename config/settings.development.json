@@ -10,6 +10,7 @@
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
+
   "defaultCourses": [
     { "courseCode": "ICS 101", "courseName": "Tools for the Information Age", "teacher": "John Doe" },
     { "courseCode": "ICS 110", "courseName": "Introduction to Computer Programming", "teacher": "Jane Smith" },
@@ -53,6 +54,69 @@
     { "firstName": "Peter", "lastName": "White", "username": "peter505", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
     { "firstName": "Rachel", "lastName": "Martinez", "username": "rachel606", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
     { "firstName": "Sophia", "lastName": "Turner", "username": "sophia707", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" }
+  ],
+
+  "defaultMeetings": [
+    {
+      "courseCode": "ICS314",
+      "location": "Room 202, University Building",
+      "sessionYear": "2023",
+      "sessionMonth": "January",
+      "sessionDay": "21",
+      "sessionTime": "10:00 AM",
+      "description": "study for upcoming WOD",
+      "owner": "Philip Johnson"
+    },
+    {
+      "courseCode": "ICS311",
+      "location": "Library Conference Room",
+      "sessionYear": "2023",
+      "sessionMonth": "May",
+      "sessionDay": "5",
+      "sessionTime": "2:30 PM",
+      "description": "review study guide for upcoming midterm",
+      "owner": "Henri Casanova"
+    },
+    {
+      "courseCode": "MAT202",
+      "location": "Mathematics Department",
+      "sessionYear": "2023",
+      "sessionMonth": "February",
+      "sessionDay": "10",
+      "sessionTime": "1:00 PM",
+      "description": "solve complex mathematical problems",
+      "owner": "Alice Smith"
+    },
+    {
+      "courseCode": "ENG101",
+      "location": "Room 105, Humanities Building",
+      "sessionYear": "2023",
+      "sessionMonth": "March",
+      "sessionDay": "15",
+      "sessionTime": "3:45 PM",
+      "description": "discuss literature and writing techniques",
+      "owner": "Bob Thompson"
+    },
+    {
+      "courseCode": "PHY301",
+      "location": "Physics Laboratory",
+      "sessionYear": "2023",
+      "sessionMonth": "April",
+      "sessionDay": "3",
+      "sessionTime": "11:15 AM",
+      "description": "conduct experiments in classical mechanics",
+      "owner": "Eva Rodriguez"
+    },
+    {
+      "courseCode": "CS405",
+      "location": "Computer Science Research Center",
+      "sessionYear": "2023",
+      "sessionMonth": "June",
+      "sessionDay": "8",
+      "sessionTime": "9:30 AM",
+      "description": "present research findings on machine learning",
+      "owner": "David Chang"
+    }
   ]
 
 }
