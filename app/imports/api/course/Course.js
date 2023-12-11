@@ -28,4 +28,4 @@ class CoursesCollection {
  * The singleton instance of the StuffsCollection.
  * @type {CoursesCollection}
  */
-export const Courses = new CoursesCollection();
+export const Course = new CoursesCollection();
