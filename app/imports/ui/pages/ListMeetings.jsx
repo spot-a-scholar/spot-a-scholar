@@ -13,6 +13,15 @@ const ListMeetings = () => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
+import { Col, Container, Row, Table } from 'react-bootstrap';
+import { useTracker } from 'meteor/react-meteor-data';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { Meetings } from '../../api/meeting/Meetings';
+import Meeting2 from '../components/Meeting2';
+
+const ListMeetings = () => {
+  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+  const { ready, meetings } = useTracker(() => {
     const subscription = Meteor.subscribe(Meetings.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
@@ -34,6 +43,32 @@ const ListMeetings = () => {
           <Row xs={1} md={2} lg={3} className="g-4">
             {meetings.map((meeting) => (<Col><Meeting meeting={meeting}/></Col>))}
           </Row>
+    const meeting = Meetings.collection.find({}).fetch();
+    return {
+      meetings: meeting,
+      ready: rdy,
+    };
+  }, []);
+  return (ready ? (
+    <Container className="py-3">
+      <Row className="justify-content-center">
+        <Col md={7}>
+          <Col className="text-center">
+            <h2>List of Meetings</h2>
+          </Col>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Topics</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {meetings.map((meeting) => <Meeting2 key={meeting._id} meeting={meeting} />)}
+            </tbody>
+          </Table>
         </Col>
       </Row>
     </Container>

@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class LandingPage {
+class HomePage {
   constructor() {
-    this.pageId = '#landing-page';
+    this.pageId = '#home-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -11,10 +11,10 @@ class LandingPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  /** Go to sign in page. */
-  async gotoSignInPage(testController) {
-    await testController.click('#landing-sign-in');
+  /** Refresh the page. */
+  async refresh(testController) {
+    await testController.refresh();
   }
 }
 
-export const landingPage = new LandingPage();
+export const homePage = new HomePage();

@@ -117,6 +117,14 @@
       "description": "present research findings on machine learning",
       "owner": "David Chang"
     }
+  "defaultUsers": [
+    { "name": "John John", "profilePicture": "test", "scholarClasses": "ICS 314", "studentClasses": "ICS 414", "owner": "admin@foo.com" },
+    { "name": "Man Man", "profilePicture": "temp", "scholarClasses": "ICS 414", "studentClasses": "ICS 514", "owner": "admin@foo.com" }
+  ],
+
+  "defaultMeetings": [
+    { "topics": "ICS 314", "startTime": "2016-11-11 12:00", "endTime": "2016-11-11 12:01", "description": "Keller 102", "owner": "john@foo.com"},
+    { "topics": "CHEM 162", "startTime": "2016-10-11 12:00", "endTime": "2016-10-11 12:01", "description": "Post Lounge", "owner": "john@foo.com"}
   ]
 
 }

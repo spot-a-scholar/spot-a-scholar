@@ -4,6 +4,8 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
+import { UserData } from '../../api/user/Users';
+import { Meetings } from '../../api/meeting/Meetings';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
@@ -58,6 +60,22 @@ Meteor.publish(Meetings.userPublicationName, function () {
 Meteor.publish(null, function () {
   if (this.userId) {
     return Meteor.roleAssignment.find({ 'user._id': this.userId });
+  }
+  return this.ready();
+});
+
+Meteor.publish(UserData.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return UserData.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
+Meteor.publish(Meetings.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Meetings.collection.find({ owner: username });
   }
   return this.ready();
 });
