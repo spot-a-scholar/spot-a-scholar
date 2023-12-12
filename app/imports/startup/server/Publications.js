@@ -5,7 +5,7 @@ import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
 import { UserData } from '../../api/user/Users';
-
+import { Participants } from '../../api/participant/Participants';
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
 Meteor.publish(Stuffs.userPublicationName, function () {
@@ -49,6 +49,13 @@ Meteor.publish(Course.userPublicationName, function () {
 Meteor.publish(Meetings.userPublicationName, function () {
   if (this.userId) {
     return Meetings.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Participants.userPublicationName, function () {
+  if (this.userId) {
+    return Participants.collection.find();
   }
   return this.ready();
 });
