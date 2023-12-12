@@ -13,7 +13,7 @@ const ListMeetings = () => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Meetings.userPublicationName);
+    const subscription = Meteor.subscribe(Meetings.adminPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
