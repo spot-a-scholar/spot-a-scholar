@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { Card, ListGroup } from 'react-bootstrap';
 import Participant from './Participant';
@@ -30,12 +31,12 @@ const Meeting = ({ meeting, participants }) => (
       <Card.Text>Description: {meeting.description}</Card.Text>
       <Card.Text>Owner: {meeting.owner}</Card.Text>
       {/* eslint-disable-next-line max-len */}
-      <AddParticipant sessionName={meeting.courseCode} sessionLocation={meeting.location} notes={meeting.description} contactId={meeting._id} sessionDate={new Date(meeting.sessionYear, months[meeting.sessionMonth], meeting.sessionDay)} sessionTime={meeting.sessionTime} />
+      <AddParticipant sessionName={meeting.courseCode} sessionLocation={meeting.location} notes={meeting.description} contactId={meeting._id} sessionDate={new Date(meeting.sessionYear, months[meeting.sessionMonth], meeting.sessionDay)} sessionTime={meeting.sessionTime} owner={Meteor.user().username} />
     </Card.Body>
     <Card.Footer>
       <Card.Subtitle>Participants</Card.Subtitle>
       <ListGroup variant="flush">
-        {participants.map((participant) => <Participant key={participant._id} participant={participant} />)}
+        {participants.map((participant) => <Participant key={participant._id} participant={participant} owner={participant.owner} />)}
       </ListGroup>
     </Card.Footer>
   </Card>
