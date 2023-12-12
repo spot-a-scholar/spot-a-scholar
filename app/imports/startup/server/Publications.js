@@ -53,11 +53,16 @@ Meteor.publish(Meetings.userPublicationName, function () {
   return this.ready();
 });
 
-// User-level publication.
-// If logged in, then publish all course documents. Otherwise, publish nothing.
 Meteor.publish(Participants.userPublicationName, function () {
   if (this.userId) {
     return Participants.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Meetings.adminPublicationName, function () {
+  if (this.userId) {
+    return Meetings.collection.find();
   }
   return this.ready();
 });
@@ -79,10 +84,10 @@ Meteor.publish(UserData.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Meetings.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Meetings.collection.find({ owner: username });
-  }
-  return this.ready();
-});
+// Meteor.publish(Meetings.userPublicationName, function () {
+//   if (this.userId) {
+//     const username = Meteor.users.findOne(this.userId).username;
+//     return Meetings.collection.find({ owner: username });
+//   }
+//   return this.ready();
+// });
