@@ -1,6 +1,6 @@
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import {
-  AutoForm, SubmitField, DateField, LongTextField, TextField,
+  AutoForm, SubmitField, LongTextField, TextField,
 } from 'uniforms-bootstrap5';
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
@@ -10,10 +10,14 @@ import SimpleSchema from 'simpl-schema';
 import { Meetings } from '../../api/meeting/Meetings';
 
 const formSchema = new SimpleSchema({
-  topics: String,
-  startTime: Date,
-  endTime: Date,
+  courseCode: String,
+  location: String,
+  sessionYear: String,
+  sessionMonth: String,
+  sessionDay: String,
+  sessionTime: String,
   description: String,
+  owner: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -23,11 +27,11 @@ const CreateMeeting = () => {
     let insertError;
     const owner = Meteor.user().username;
     const {
-      topics, startTime, endTime, description,
+      courseCode, location, sessionYear, sessionMonth, sessionDay, sessionTime, description,
     } = data;
     Meetings.collection.insert(
       {
-        topics, startTime, endTime, description, owner,
+        courseCode, location, sessionYear, sessionMonth, sessionDay, sessionTime, description, owner,
       },
       (error) => { insertError = error; },
     );
@@ -47,11 +51,14 @@ const CreateMeeting = () => {
           <AutoForm ref={(ref) => { fRef = ref; }} schema={bridge} onSubmit={(data) => submit(data, fRef)}>
             <Card className="p-2">
               <Row>
-                <Col><TextField name="topics" showInlineError placeholder="Topics/Classes" /></Col>
+                <Col><TextField name="courseCode" showInlineError placeholder="Classes" /></Col>
+                <Col><TextField name="location" showInlineError placeholder="Location" /></Col>
               </Row>
               <Row>
-                <Col><DateField name="startTime" showInlineError placeholder="Schedule the Meeting" /></Col>
-                <Col><DateField name="endTime" showInlineError placeholder="Description" /></Col>
+                <Col><TextField name="sessionYear" showInlineError placeholder="Schedule the Meeting (Year)" /></Col>
+                <Col><TextField name="sessionMonth" showInlineError placeholder="Month" /></Col>
+                <Col><TextField name="sessionDay" showInlineError placeholder="Day" /></Col>
+                <Col><TextField name="sessionTime" showInlineError placeholder="Time" /></Col>
               </Row>
               <Row>
                 <Col><LongTextField name="description" showInlineError placeholder="Description" /></Col>
