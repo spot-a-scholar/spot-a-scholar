@@ -25,7 +25,6 @@ const CreateStudent = () => {
   const submit = (data) => {
     let insertError;
     const owner = Meteor.user().username;
-    const id = Meteor.user()._id;
     const {
       name, profilePicture, scholarClasses, studentClasses,
     } = data;

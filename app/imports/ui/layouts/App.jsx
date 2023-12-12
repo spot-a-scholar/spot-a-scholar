@@ -21,7 +21,8 @@ import ListClasses from '../pages/ListClasses';
 import Home from '../pages/Home';
 import EditProfile from '../pages/EditProfile';
 import ShowProfile from '../pages/ShowProfile';
-import CreateStudent from '../pages/CreateProfile';
+// this was the old one
+// import CreateStudent from '../pages/CreateProfile';
 import MeetingList from '../pages/MeetingList';
 import ListMeetings from '../pages/ListMeetings';
 // try to fix this one to work with only one page
