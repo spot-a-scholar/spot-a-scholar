@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /* Renders a table containing all the ICS Classes. Uses fake data to render each row */
 const ListClasses = () => {
@@ -38,7 +39,7 @@ const ListClasses = () => {
   ];
 
   return (
-    <Container className="py-3">
+    <Container id="ics-classes-page" className="py-3">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
@@ -61,7 +62,9 @@ const ListClasses = () => {
                   <td>{iclass.professor}</td>
                   <td>{iclass.students.join(', ')}</td>
                   <td>{iclass.tutors.join(', ')}</td>
-                  <td>Link</td>
+                  <td>
+                    <Link to={`/createmeeting/${iclass._id}`}>Create Session</Link>
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -1,4 +1,4 @@
-import { Card, Col, Container, Row, Alert } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import {
   AutoForm, TextField, SubmitField,
 } from 'uniforms-bootstrap5';
@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import React, { useState } from 'react';
+import React from 'react';
 import { UserData } from '../../api/user/Users';
 
 const formSchema = new SimpleSchema({
@@ -20,7 +20,6 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the Page for adding a document. */
 const CreateStudent = () => {
-  const [profileState, setProfileState] = useState('');
   /* On submit, try to insert the data. If successful, reset the form. */
   const submit = (data) => {
     let insertError;
@@ -38,7 +37,6 @@ const CreateStudent = () => {
       swal('Error', insertError.message, 'error');
     } else {
       swal('Success', 'The student record was created.', 'success');
-      setProfileState(owner);
     }
   };
 
@@ -46,7 +44,7 @@ const CreateStudent = () => {
 
   /* Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   return (
-    <Container>
+    <Container id="create-profile-page">
       <Row className="justify-content-center">
         <Col>
           <h2 className="text-center">User Profile</h2>
@@ -63,11 +61,6 @@ const CreateStudent = () => {
               </Row>
             </Card>
           </AutoForm>
-          {profileState ? (
-            <Alert className="py-2">
-              <a href={`/editprofile/${profileState}`}>Edit this data</a>
-            </Alert>
-          ) : ''}
         </Col>
       </Row>
     </Container>

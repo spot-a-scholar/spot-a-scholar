@@ -3,17 +3,44 @@ import {
   AutoForm, SubmitField, DateField, LongTextField, TextField,
 } from 'uniforms-bootstrap5';
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { MeetingInfoSchema as formSchema } from '../forms/MeetingInfo';
+import swal from 'sweetalert';
+import SimpleSchema from 'simpl-schema';
+import { Meetings } from '../../api/meeting/Meetings';
+
+const formSchema = new SimpleSchema({
+  topics: String,
+  startTime: Date,
+  endTime: Date,
+  description: String,
+});
 
 const bridge = new SimpleSchema2Bridge(formSchema);
-// temp function to get rid of errors, need to implement actual submit function
-const submit = (data, formRef) => data + formRef;
 const CreateMeeting = () => {
 /* Render the form. Use Uniforms: https://github.com/vazco/uniforms */
+  const submit = (data, formRef) => {
+    let insertError;
+    const owner = Meteor.user().username;
+    const {
+      topics, startTime, endTime, description,
+    } = data;
+    Meetings.collection.insert(
+      {
+        topics, startTime, endTime, description, owner,
+      },
+      (error) => { insertError = error; },
+    );
+    if (insertError) {
+      swal('Error', insertError.message, 'error');
+    } else {
+      swal('Success', 'The meeting was created.', 'success');
+      formRef.reset();
+    }
+  };
   let fRef = null;
   return (
-    <Container>
+    <Container id="create-meeting-page">
       <Row className="justify-content-center">
         <Col>
           <h2 className="text-center">Create Meeting</h2>
