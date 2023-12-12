@@ -16,7 +16,7 @@ const ShowProfile = () => {
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const users = UserData.collection.find({}).fetch();
+    const users = UserData.collection.find({ owner: Meteor.user().username }).fetch();
     return {
       profiles: users,
       ready: rdy,

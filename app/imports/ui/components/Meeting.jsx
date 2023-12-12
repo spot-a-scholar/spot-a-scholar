@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
+import Participant from './Participant';
+import AddParticipant from './AddParticipant';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-const Meeting = ({ meeting }) => (
+const Meeting = ({ meeting, participants }) => (
   <Card>
     <Card.Header>
       <Card.Title>{meeting.courseCode}</Card.Title>
@@ -13,6 +15,10 @@ const Meeting = ({ meeting }) => (
       <Card.Text>Location: {meeting.location}</Card.Text>
       <Card.Text>Description: {meeting.description}</Card.Text>
       <Card.Text>Owner: {meeting.owner}</Card.Text>
+      <ListGroup variant="flush">
+        {participants.map((participants) => <Participant key={participant._id} participant={participant}/>)}
+      </ListGroup>
+      <AddParticipant/>
     </Card.Body>
     </Card>
 );
@@ -28,6 +34,10 @@ Meeting.propTypes = {
     sessionTime: PropTypes.string,
     description: PropTypes.string,
     owner: PropTypes.string,
+    _id: PropTypes.string,
+  }).isRequired,
+  participants: PropTypes.shape({
+    username: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
 };

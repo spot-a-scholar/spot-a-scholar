@@ -4,6 +4,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
+import { Participants } from '../../api/participant/Participant.js';
 import { UserData } from '../../api/user/Users';
 
 // User-level publication.
@@ -53,6 +54,15 @@ Meteor.publish(Meetings.userPublicationName, function () {
   return this.ready();
 });
 
+// User-level publication.
+// If logged in, then publish all course documents. Otherwise, publish nothing.
+Meteor.publish(Participants.userPublicationName, function () {
+  if (this.userId) {
+    return Participants.collection.find();
+  }
+  return this.ready();
+});
+
 
 // alanning:roles publication
 // Recommended code to publish roles for each user.
@@ -67,14 +77,6 @@ Meteor.publish(UserData.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return UserData.collection.find({ owner: username });
-  }
-  return this.ready();
-});
-
-Meteor.publish(Meetings.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Meetings.collection.find({ owner: username });
   }
   return this.ready();
 });

@@ -3,23 +3,27 @@ import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Meetings } from '../../api/meeting/Meetings';
+import { Participants } from '../../api/participant/Participant';
 import Meeting from '../components/Meeting';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListMeetings = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready, meetings } = useTracker(() => {
+  const { ready, meetings, participants } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Meetings.userPublicationName);
+    const subscription2 = Meteor.subscribe(Participants.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready();
+    const rdy = subscription.ready() && subscription2.ready();
     // Get the Stuff documents
     const meetingItems = Meetings.collection.find({}).fetch();
+    const participantItems = Participants.collection.find({}).fetch();
     return {
       meetings: meetingItems,
+      participants: participantItems,
       ready: rdy,
     };
   }, []);
@@ -32,9 +36,8 @@ const ListMeetings = () => {
             <h2>List Meetings</h2>
           </Col>
           <Row xs={1} md={2} lg={3} className="g-4">
-            {meetings.map((meeting) => (<Col><Meeting meeting={meeting}/></Col>))}
+            {meetings.map((meeting) => (<Col><Meeting meeting={meeting} participants={participants}/></Col>))}
           </Row>
-
         </Col>
       </Row>
     </Container>
