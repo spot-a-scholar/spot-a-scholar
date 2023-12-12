@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Meteor } from 'meteor/meteor';
 import { ListGroup } from 'react-bootstrap';
 
 /** Renders a single row in the List Participant table. See pages/ListParticipant.jsx. */
-const Participant = () => (
+const Participant = ({ participant }) => (
   <ListGroup.Item className="participant">
-    <p>{Meteor.users.findOne().username}</p>
+    <p>{participant.owner}</p>
   </ListGroup.Item>
 );
 

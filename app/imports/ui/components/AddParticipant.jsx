@@ -19,12 +19,11 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the AddParticipant page for adding a document. */
-const AddParticipant = ({ sessionName, sessionLocation, notes, contactId, sessionDate, sessionTime }) => {
+const AddParticipant = ({ sessionName, sessionLocation, notes, contactId, sessionDate, sessionTime, owner }) => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
     const { createdAt } = data;
-    const owner = Meteor.user().username;
     const SendEmail = () => {
       Meteor.call('initialEmail', owner, sessionName, sessionLocation, sessionDate, sessionTime, notes);
     };
@@ -71,6 +70,7 @@ AddParticipant.propTypes = {
   // eslint-disable-next-line react/require-default-props
   sessionDate: PropTypes.instanceOf(Date),
   sessionTime: PropTypes.string.isRequired,
+  owner: PropTypes.string.isRequired,
 };
 
 export default AddParticipant;
