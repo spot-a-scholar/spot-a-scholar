@@ -6,7 +6,7 @@ const Home = () => (
   <Container id="home-page" className="grad-background">
     <Row className="py-5">
       <Col className="text-center">
-        <h1 className="white-text">Home</h1>
+        <h1 className="">Home</h1>
       </Col>
     </Row>
     <Row className="d-flex justify-content-center">

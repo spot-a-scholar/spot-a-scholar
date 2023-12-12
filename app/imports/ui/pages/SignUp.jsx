@@ -42,7 +42,7 @@ const SignUp = ({ location }) => {
     return <Navigate to={from} />;
   }
   return (
-    <div id="signup-page-bg">
+    <div>
       <Container className="py-lg-5">
         <Row className="justify-content-center">
           <Col id="signup-page" className="square border rounded-5" xs={6}>
