@@ -84,10 +84,19 @@ Meteor.publish(UserData.userPublicationName, function () {
   return this.ready();
 });
 
-// Meteor.publish(Meetings.userPublicationName, function () {
-//   if (this.userId) {
-//     const username = Meteor.users.findOne(this.userId).username;
-//     return Meetings.collection.find({ owner: username });
-//   }
-//   return this.ready();
-// });
+// Admin-level publication.
+// If logged in and with admin role, then publish all documents from all users. Otherwise, publish nothing.
+Meteor.publish(UserData.adminPublicationName, function () {
+  if (this.userId) {
+    return UserData.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Meetings.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Meetings.collection.find({ owner: username });
+  }
+  return this.ready();
+});

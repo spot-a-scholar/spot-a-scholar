@@ -5,6 +5,11 @@ const UserInfoSchema = new SimpleSchema({
   profilePicture: { label: 'Profile Picture', type: String },
   scholarClasses: { label: 'Scholar Classes', type: String },
   studentClasses: { label: 'Student Classes', type: String },
+  score: {
+    type: Number,
+    optional: true,
+    defaultValue: 0,
+  },
 });
 
 export { UserInfoSchema };

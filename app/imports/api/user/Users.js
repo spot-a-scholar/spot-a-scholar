@@ -14,6 +14,11 @@ class UserDataCollection {
         profilePicture: String,
         scholarClasses: String,
         studentClasses: String,
+        score: {
+          type: Number,
+          optional: true,
+          defaultValue: 0,
+        },
         owner: String,
       });
     /** Attach the schema to the collection. */

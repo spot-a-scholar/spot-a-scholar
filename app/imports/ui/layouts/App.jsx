@@ -27,6 +27,7 @@ import ShowProfile from '../pages/ShowProfile';
 import MeetingList from '../pages/MeetingList';
 // try to fix this one to work with only one page
 import CreateProfile from '../pages/UserProfile';
+import Leaderboard from '../pages/Leaderboard';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/createmeeting" element={<ProtectedRoute><CreateMeeting /></ProtectedRoute>} />
           <Route path="/editprofile/:_id" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
           <Route path="/showprofile" element={<ProtectedRoute><ShowProfile /></ProtectedRoute>} />
+          <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </div>
