@@ -77,10 +77,10 @@ Meteor.publish(UserData.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Meetings.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Meetings.collection.find({ owner: username });
-  }
-  return this.ready();
-});
+// Meteor.publish(Meetings.userPublicationName, function () {
+//   if (this.userId) {
+//     const username = Meteor.users.findOne(this.userId).username;
+//     return Meetings.collection.find({ owner: username });
+//   }
+//   return this.ready();
+// });
