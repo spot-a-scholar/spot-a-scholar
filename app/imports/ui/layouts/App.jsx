@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListMeetings from '../pages/ListMeetings';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
@@ -28,6 +27,7 @@ import MeetingList from '../pages/MeetingList';
 // try to fix this one to work with only one page
 import CreateProfile from '../pages/UserProfile';
 import Leaderboard from '../pages/Leaderboard';
+import ListMeetingsAdmin from '../pages/ListMeetingsAdmin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/calendar" element={<ProtectedRoute><MeetingList /></ProtectedRoute>} />
           <Route path="/class" element={<ProtectedRoute><ListClasses /></ProtectedRoute>} />
-          <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
+          <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListMeetingsAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/userprofile" element={<ProtectedRoute><CreateProfile /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
