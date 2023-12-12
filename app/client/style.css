@@ -3,6 +3,9 @@
 
 /* Set up some CSS variables to theme the application. */
 :root {
+  --matr-navbar-bg: #ECECEC;
+  --matr-navbar-bg-rgb: 236, 236, 236;
+  --matr-navbar-text-color: #FFFFFF;
   --navbar-text: white;
 }
 
@@ -10,18 +13,20 @@
  See https://getbootstrap.com/docs/5.2/customize/css-variables/
  */
 body {
+  background-color: #A5D8B3 !important;
 }
 
 .white-text {
   color: white !important;
 }
 
-navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
-  color: #ffffff !important; /* Set the text color for the dropdown items */
-  /* Add other styles for dropdown items as needed */
+.black-text {
+  color: black !important;
 }
 
-.navbar {
+body .navbar {
+  --bs-navbar-brand-color: var(--matr-navbar-text-color);
+  --bs-navbar-color: var(--matr-navbar-text-color);
   background-color: #024731;
 }
 

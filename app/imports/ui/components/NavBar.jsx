@@ -33,9 +33,9 @@ const NavBar = () => {
               <Nav.Link className="white-text" id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
             ) : ''}
           </Nav>
-          <Nav className="justify-content-end">
+          <Nav className="white-text justify-content-end">
             {currentUser === '' ? (
-              <NavDropdown id="login-dropdown" title="Login">
+              <NavDropdown className="white-text" id="login-dropdown" title="Login">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
                   <PersonFill />
                   Sign
