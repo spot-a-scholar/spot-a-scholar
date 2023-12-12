@@ -121,8 +121,8 @@
     ],
 
   "defaultUsers": [
-    { "name": "John John", "profilePicture": "test", "scholarClasses": "ICS 314", "studentClasses": "ICS 414", "owner": "admin@foo.com" },
-    { "name": "Man Man", "profilePicture": "temp", "scholarClasses": "ICS 414", "studentClasses": "ICS 514", "owner": "admin@foo.com" }
+    { "name": "John John", "profilePicture": "test", "scholarClasses": "ICS 314", "studentClasses": "ICS 414", "score": 0, "owner": "admin@foo.com" },
+    { "name": "Man Man", "profilePicture": "temp", "scholarClasses": "ICS 414", "studentClasses": "ICS 514", "score": 0, "owner": "admin@foo.com" }
   ]
 
 }

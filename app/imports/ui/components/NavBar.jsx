@@ -22,11 +22,13 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
             {currentUser ? ([
-              <Nav.Link className="px-3 white-text" id="home-nav" as={NavLink} to="/home" key="home">Home</Nav.Link>,
-              <Nav.Link className="px-3 white-text" id="create-meeting-nav" as={NavLink} to="/createmeeting" key="createmeeting">Create Meeting</Nav.Link>,
-              <Nav.Link className="px-3 white-text" id="meeting-nav" as={NavLink} to="/list" key="meeting">List Meetings</Nav.Link>,
-              <Nav.Link className="px-3 white-text" id="ics-clases-nav" as={NavLink} to="/class" key="icsclass">ICS Classes</Nav.Link>,
-              <Nav.Link className="px-3 white-text" id="show-profile-nav" as={NavLink} to="/showprofile" key="userprofile">Show Profile</Nav.Link>,
+              <Nav.Link className="px-3" id="home-nav" as={NavLink} to="/home" key="home">Home</Nav.Link>,
+              <Nav.Link className="px-3" id="create-meeting-nav" as={NavLink} to="/createmeeting" key="createmeeting">Create Meeting</Nav.Link>,
+              <Nav.Link className="px-3" id="meeting-nav" as={NavLink} to="/list" key="meeting">List Meetings</Nav.Link>,
+              <Nav.Link className="px-3" id="ics-clases-nav" as={NavLink} to="/class" key="icsclass">ICS Classes</Nav.Link>,
+              <Nav.Link className="px-3" id="show-profile-nav" as={NavLink} to="/showprofile" key="userprofile">Show Profile</Nav.Link>,
+              <Nav.Link className="px-3" id="leaderboard-nav" as={NavLink} to="/leaderboard" key="leaderboard">Leaderboard</Nav.Link>,
+
             ]) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Nav.Link className="white-text" id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
