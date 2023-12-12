@@ -45,16 +45,16 @@
   ],
 
   "defaultStudents": [
-    { "firstName": "Alice", "lastName": "Johnson", "username": "alice123", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Bob", "lastName": "Smith", "username": "bob456", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Charlie", "lastName": "Davis", "username": "charlie789", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Grace", "lastName": "Miller", "username": "grace101", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Henry", "lastName": "Turner", "username": "henry202", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Isabel", "lastName": "Brown", "username": "isabel303", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Olivia", "lastName": "Garcia", "username": "olivia404", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Peter", "lastName": "White", "username": "peter505", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Rachel", "lastName": "Martinez", "username": "rachel606", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" },
-    { "firstName": "Sophia", "lastName": "Turner", "username": "sophia707", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "owner": "john@foo.com" }
+    { "name": "Alice Johnson", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Bob Smith", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png","scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Charlie Davis", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414","owner": "john@foo.com" },
+    { "name": "Grace Miller", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Henry Turner", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Isabel Brown", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Olivia Garcia", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Peter White","profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Rachel Martinez", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" },
+    { "name": "Sophia Turner", "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png", "scholarClasses":"ICS 314", "studentClasses": "ICS 414", "owner": "john@foo.com" }
   ],
 
   "defaultMeetings": [

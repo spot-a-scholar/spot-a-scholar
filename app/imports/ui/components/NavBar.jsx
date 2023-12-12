@@ -13,9 +13,9 @@ const NavBar = () => {
   }), []);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="navbar">
       <Container>
-        <Navbar.Brand as={NavLink} to="/home">
+        <Navbar.Brand className="white-text" as={NavLink} to="/home">
           <h2>Spot-a-Scholar</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,17 +26,17 @@ const NavBar = () => {
               <Nav.Link className="px-3" id="create-meeting-nav" as={NavLink} to="/createmeeting" key="createmeeting">Create Meeting</Nav.Link>,
               <Nav.Link className="px-3" id="meeting-nav" as={NavLink} to="/list" key="meeting">List Meetings</Nav.Link>,
               <Nav.Link className="px-3" id="ics-clases-nav" as={NavLink} to="/class" key="icsclass">ICS Classes</Nav.Link>,
-              <Nav.Link className="px-3" id="user-profile-nav" as={NavLink} to="/userprofile" key="userprofile">User Profile</Nav.Link>,
               <Nav.Link className="px-3" id="show-profile-nav" as={NavLink} to="/showprofile" key="userprofile">Show Profile</Nav.Link>,
               <Nav.Link className="px-3" id="leaderboard-nav" as={NavLink} to="/leaderboard" key="leaderboard">Leaderboard</Nav.Link>,
+
             ]) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
+              <Nav.Link className="white-text" id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
             ) : ''}
           </Nav>
-          <Nav className="justify-content-end">
+          <Nav className="white-text justify-content-end">
             {currentUser === '' ? (
-              <NavDropdown id="login-dropdown" title="Login">
+              <NavDropdown className="white-text" id="login-dropdown" title="Login">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
                   <PersonFill />
                   Sign
