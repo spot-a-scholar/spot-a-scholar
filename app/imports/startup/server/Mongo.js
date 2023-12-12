@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Course } from '../../api/course/Course.js';
-import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
 import { UserData } from '../../api/user/Users.js';
 
