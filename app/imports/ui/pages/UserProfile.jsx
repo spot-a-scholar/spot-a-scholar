@@ -1,5 +1,4 @@
-// this one is outdated and needs to be fixed
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Alert } from 'react-bootstrap';
 import {
   AutoForm, TextField, SubmitField,
 } from 'uniforms-bootstrap5';
@@ -38,10 +37,10 @@ const UserProfile = () => {
 
   let fRef = null;
 import swal from 'sweetalert';
-import Meteor from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import React from 'react';
+import React, { useState } from 'react';
 import { UserData } from '../../api/user/Users';
 
 const formSchema = new SimpleSchema({
@@ -52,15 +51,17 @@ const formSchema = new SimpleSchema({
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
-const CreateProfile = () => {
+
+/* Renders the Page for adding a document. */
+const CreateStudent = () => {
+  const [profileState, setProfileState] = useState('');
   /* On submit, try to insert the data. If successful, reset the form. */
   const submit = (data) => {
     let insertError;
+    const owner = Meteor.user().username;
     const {
       name, profilePicture, scholarClasses, studentClasses,
     } = data;
-    const owner = Meteor.user().username;
-    // const id = Meteor.user()._id;
     UserData.collection.insert(
       {
         name, profilePicture, scholarClasses, studentClasses, owner,
@@ -70,11 +71,14 @@ const CreateProfile = () => {
     if (insertError) {
       swal('Error', insertError.message, 'error');
     } else {
-      swal('Success', 'The profile was updated.', 'success');
+      swal('Success', 'The student record was created.', 'success');
+      setProfileState(owner);
     }
   };
-  // const submit = (data, formRef) => data + formRef;
-  // const UserProfile = () => {
+
+  // Put a space before the label for the Hobbies SelectField.
+
+  /* Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   return (
     <Container>
       <Row className="justify-content-center">
@@ -93,10 +97,15 @@ const CreateProfile = () => {
               </Row>
             </Card>
           </AutoForm>
+          {profileState ? (
+            <Alert className="py-2">
+              <a href={`/editprofile/${profileState}`}>Edit this data</a>
+            </Alert>
+          ) : ''}
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default CreateProfile;
+export default CreateStudent;
