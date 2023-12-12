@@ -2,8 +2,12 @@ import SimpleSchema from 'simpl-schema';
 
 const MeetingInfoSchema = new SimpleSchema({
   topics: { label: 'Topics/Classes', type: String },
-  startTime: { label: 'Schedule the Meeting', type: Date, defaultValue: new Date() },
-  endTime: { label: 'Schedule the Meeting End', type: Date, defaultValue: new Date() },
+  courseCode: { label: 'Course Code', type: String },
+  location: { label: 'Location', type: String },
+  sessionYear: { label: 'Session Year', type: String },
+  sessionMonth: { label: 'Session Month', type: String },
+  sessionDay: { label: 'Session Day', type: String },
+  sessionTime: { label: 'Session Time', type: String },
   description: { label: 'Description', type: String },
 });
 
