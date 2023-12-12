@@ -30,12 +30,15 @@ body .navbar {
   background-color: #024731;
 }
 
+.footer {
+  background-color: #024731 !important;
+  color: white !important;
+}
+
 #signup-page {
- background-color: #B4A7D7;
 }
 
 #signin-page {
-  background-color: #B4A7D7;
 }
 
 #signup-page-bg {
