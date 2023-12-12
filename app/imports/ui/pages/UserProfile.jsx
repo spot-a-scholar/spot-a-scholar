@@ -1,4 +1,4 @@
-import { Card, Col, Container, Row, Alert } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import {
   AutoForm, TextField, SubmitField,
 } from 'uniforms-bootstrap5';
@@ -20,6 +20,7 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the Page for adding a document. */
 const CreateStudent = () => {
+  // eslint-disable-next-line no-unused-vars
   const [profileState, setProfileState] = useState('');
   /* On submit, try to insert the data. If successful, reset the form. */
   const submit = (data) => {
@@ -63,11 +64,6 @@ const CreateStudent = () => {
               </Row>
             </Card>
           </AutoForm>
-          {profileState ? (
-            <Alert className="py-2">
-              <a href={`/editprofile/${profileState}`}>Edit this data</a>
-            </Alert>
-          ) : ''}
         </Col>
       </Row>
     </Container>
