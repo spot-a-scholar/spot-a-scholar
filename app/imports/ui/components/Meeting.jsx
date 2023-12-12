@@ -14,7 +14,7 @@ const Meeting = ({ meeting }) => (
       <Card.Text>Description: {meeting.description}</Card.Text>
       <Card.Text>Owner: {meeting.owner}</Card.Text>
     </Card.Body>
-    </Card>
+  </Card>
 );
 
 // Require a document to be passed to this component.

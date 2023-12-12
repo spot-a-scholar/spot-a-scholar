@@ -32,7 +32,7 @@ const ListMeetings = () => {
             <h2>List Meetings</h2>
           </Col>
           <Row xs={1} md={2} lg={3} className="g-4">
-            {meetings.map((meeting) => (<Col><Meeting meeting={meeting}/></Col>))}
+            {meetings.map((meeting) => (<Col><Meeting meeting={meeting} /></Col>))}
           </Row>
 
         </Col>
