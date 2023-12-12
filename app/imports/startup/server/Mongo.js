@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Course } from '../../api/course/Course.js';
-import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
 import { UserData } from '../../api/user/Users.js';
 
@@ -36,18 +35,18 @@ if (Course.collection.find().count() === 0) {
 }
 
 // Initialize the database with a default data document.
-const addStudents = (student) => {
-  console.log(`  Adding: ${student.firstName} ${student.lastName} (${student.owner})`);
-  Students.collection.insert(student);
-};
-
-// Initialize the StudentsCollection if empty.
-if (Students.collection.find().count() === 0) {
-  if (Meteor.settings.defaultStudents) {
-    console.log('Creating default data.');
-    Meteor.settings.defaultStudents.forEach(student => addStudents(student));
-  }
-}
+// const addStudents = (student) => {
+//   console.log(`  Adding: ${student.firstName} ${student.lastName} (${student.owner})`);
+//   Students.collection.insert(student);
+// };
+//
+// // Initialize the StudentsCollection if empty.
+// if (Students.collection.find().count() === 0) {
+//   if (Meteor.settings.defaultStudents) {
+//     console.log('Creating default data.');
+//     Meteor.settings.defaultStudents.forEach(student => addStudents(student));
+//   }
+// }
 
 const addMeetings = (meeting) => {
   console.log(`  Adding: ${meeting.courseCode} (${meeting.owner})`);
@@ -68,9 +67,9 @@ const addUser = (data) => {
 };
 
 if (UserData.collection.find().count() === 0) {
-  if (Meteor.settings.defaultUsers) {
+  if (Meteor.settings.defaultStudents) {
     console.log('Creating default users.');
-    Meteor.settings.defaultUsers.forEach(data => addUser(data));
+    Meteor.settings.defaultStudents.forEach(data => addUser(data));
   }
 }
 
