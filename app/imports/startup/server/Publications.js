@@ -5,7 +5,6 @@ import { Course } from '../../api/course/Course.js';
 import { Students } from '../../api/student/Student.js';
 import { Meetings } from '../../api/meeting/Meetings.js';
 import { UserData } from '../../api/user/Users';
-import { Meetings } from '../../api/meeting/Meetings';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
